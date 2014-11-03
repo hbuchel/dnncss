@@ -1,0 +1,284 @@
+	<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WRITING OBJECT-ORIENTED AND SCALABLE CSS FOR DNN SITES</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/dnncss.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+	
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<div class="intro">
+						<h1 class="intro__title">
+							<span class="writing">
+								Writing
+							</span>
+							<span class="oocss-scalable">
+								Object-Oriented and Scalable CSS
+							</span>
+							<span class="for-dnn">
+								for DNN
+							</span>
+						</h1>
+						<h2 class="intro__name">
+							Heather Buchel / Front-End Developer
+						</h2>
+						<h3 class="intro__twitter">
+							@hbuchel
+						</h3>
+					</div>
+					<div class="logos">
+						<img src="images/logo-dnn.png" class="logo" /><br/>
+						<img src="images/logo-10poundgorilla.png" class="logo" />
+						<img src="images/logo-appliedinnovations.png" class="logo" />
+						<img src="images/logo-avalara.png" class="logo" /><br/>
+						<img src="images/logo-dnn4less.png" class="logo" />
+						<img src="images/logo-hotcakes.png" class="logo" />
+						<img src="images/logo-managed.png" class="logo" />
+					</div>
+				</section>
+				<section data-background="images/team.jpg" data-background-size="100%">
+				</section>
+				<section>
+					<h1 class="slide-title">
+						How GW Uses DNN
+					</h1>
+					DNN is more of a foundation, not our CMS.
+					We use 3rd Party Modules for managing Content.
+					A foundation for our custom modules and web apps.
+				</section>
+				<section>
+					<h1 class="slide-title">
+						The Tools We Use
+					</h1>
+					<div class="layout">
+						<div class="box">
+							<img src="images/svg/DNN.svg" />
+							<h2 class="box-title">Custom Development and 3rd Party modules</h2>
+						</div>
+						<div class="box">
+							<img src="images/svg/OOCSS.svg" />
+							<h2 class="box-title">OOCSS</h2>
+						</div>
+						<div class="box">
+							<h2 class="box-title">SMACSS</h2>
+						</div>
+						<div class="box">
+							<h2 class="box-title">Gulp + Sass + Compass</h2>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1 class="slide-title">
+						What this gives us:
+					</h1>
+					Better Maintainability
+					Easier to Scale
+					Future Friendly
+					Happier Front-End Devs!
+				</section>
+				<section>
+					<h1>Before we get to our CSS, a brief history and Where We Are Now</h1>
+				</section>
+				<section>
+					<h1 class="slide-title">
+						The Old Way: 3rd Party Modules
+					</h1>
+					Image of old file structure, lots of separated CSS files
+					3rd party modules have a lot of their own opinions about css and markup. getting these to play nice with our own theme is not always possible; some modules aren't templatable (can't change the markup) or not themable (can't change the css). You're left with a lot of overriding and !important hell
+				</section>
+				<section>
+					<h1 class="slide-title">
+						The Old Way: Custom Modules
+					</h1>
+					Our custom modules sometimes fell into the same pitfall: Scatter module.css files with unshareable styles.
+				</section>
+				<section>
+					<h1 class="slide-title">
+						The New Way: 3rd Party Modules
+					</h1>
+					Choose Better 3rd Party Modules
+					Look for ones that are templatable and themable
+					are the templates and theme files easilly maintained in version control? (i.e. can you only edit them in some weird DNN interface)
+					Look for ones the follow modern approaches to web design: Do they work in a responsive setting? Do they use semantic HTML? (i.E. are there tables for the layout?)
+				</section>
+				<section>
+					<h1 class="slide-title">
+						The New Way: 3rd Party Modules (cont)
+					</h1>
+					Some of our favorite modules
+					EasyDNNNews News/Events/Content Types
+					Ventrian News Articles News/Content Types
+					2SexyContent Everything ever!
+				</section>
+				<section>
+					<h1 class="slide-title">
+						The New Way: Custom Modules and 3rd Party Modules
+					</h1>
+					No more module.css files. No more scattered style sheets specific to a module. All of our styles are maintained through our theme.
+				</section>
+				<section>
+					<h1>Now that that's cleared up, let's talk about our CSS</h1>
+				</section>
+				<section>
+					<h1 class="slide-title">OOCSS</h1>
+					- "Separate Structure and Skin" - Define certain features (such as a combination of padding and border-color) as small css "objects" that can be built up and combined with other objects to form modules. Also, avoid styling elements directly.
+					Bad / Good
+					- "Separate Container and Content" - CSS objects should be movable; don't rely on an objects location to style it.
+					Bad / Good
+				</section>
+				<section>
+					<h1 class="slide-title">A Little Dash of SMACSS</h1>
+					We don't follow it to a T, but here are our take-a-ways:
+					- Minimize Depth of Applicability - Ours is shallow, we use a lot of classes on our elements and create a lot of modules because it makes it that much easier to scale.
+					- Separate our CSS into Base Rules, layout rules and Modules (and even then, some of our layouts ARE more like modules)
+				</section>
+				<section>
+					<h1 class="slide-title">
+						Sass <heart>
+					</h1>
+					We use Sass because it lets us write scalable OOCSS more efficiently and it makes it easier to maintain.
+					- mixins are a lifesaver
+					- placeholders are awesome
+					- @extend is an OOCSS-er's best Friend
+						
+				</section>
+				<section>
+					<h1 class="slide-title">
+						An OOCSS Example: Buttons
+					</h1>	
+					A common Example for OOCSS and SMACSS are button styles, typically you'll have
+
+					image of button button-secondary button-disabled button-active
+				</section>
+				<section>
+					<h1 class="slide-title">
+						An OOCSS Example: Buttons
+					</h1>
+					.button-primary
+					.button-primary:hover, .button-primary:focus
+					.button-secondary
+					.button-secondary:hover, .button-secondary:focus
+				</section>
+				<section>
+					<h1 class="slide-title">
+						An OOCSS Example: Buttons
+					</h1>
+					What if we want to add modifications?
+					.disabled
+					.block
+					.active
+				</section>
+				<section>
+					<h1 class="slide-title">An OOCSS Example: Media Object</h1>
+					Image of three different media objects
+					Flex list row with image (Articles)
+					Flex List row with icon (Services)
+					flex list column with image (User Profiles)
+				</section>
+				<section>
+					<h1 class="slide-title">
+						Don't Overmodularize
+					</h1>
+					.button-primary.block could have been .button-primary--block
+					Walk the fine line of creating modules, but still
+				</section>
+				<section>
+					<h1 class="slide-title">
+						Putting Together OOCSS with DNN
+					</h1>
+					Because we have these nice modular but still scalable styles
+					we can use these classes and styles in our nicely chosen and better made DNN modules. The same styles used to style articles could also be used to style our events.
+				</section>
+
+				<section>
+					- Sponsors/DNN Intro Slide
+					- Who I am
+					- Who Gravity Works Is
+					- What We're Going to talk about
+					- What type of websites we make
+					- How we Use DNN - It's not a CMS for us. It's a foundation for our own frameworks.
+					- Our Custom Modules
+					- Some of our Favorite 3rd Party Modules
+					- How we write CSS at Gravity Works
+					- Some Modules are Opinionated, what this causes
+					- Why writing OOCSS and choosing better modules helps with This
+					- 
+					- Sharing Container Styles with Your Theme
+					- Sharing Styles Across Modules
+					- How we Use Sass to make this easier
+					- How we use Gulp to make this easier
+					- How we use a style guide to make it easier to find reusable styles 
+				</section>
+				
+			</div><!--.slides-->
+		</div><!--.reveal-->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

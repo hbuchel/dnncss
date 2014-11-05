@@ -85,31 +85,31 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #00008B; }
+  border-right-color: #EA158E; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #00008B; }
+  border-left-color: #EA158E; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #00008B; }
+  border-bottom-color: #EA158E; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #00008B; }
+  border-top-color: #EA158E; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #0000f1; }
+  border-right-color: #bb1172; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #0000f1; }
+  border-left-color: #bb1172; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #0000f1; }
+  border-bottom-color: #bb1172; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #0000f1; }
+  border-top-color: #bb1172; }
 
 /*********************************************
  * PROGRESS BAR
@@ -118,7 +118,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #00008B;
+  background: #EA158E;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -138,22 +138,35 @@ div.layout {
 
 div.box {
   flex: 1;
-  padding: 0 20px; }
+  padding: 0 15px; }
+  div.box.box--2 {
+    flex: 2; }
+
+.align-center, ul.align-center, h3.hero-subtitle.align-center, h2.hero-title.align-center {
+  text-align: center; }
 
 /* Intro Slide */
 .reveal h1 {
   text-shadow: none; }
+.reveal pre {
+  box-shadow: none; }
 .reveal .logo {
   margin: 20px; }
 .reveal .writing {
-  font-size: 2.2rem; }
+  font-size: 2.2rem;
+  font-weight: 700; }
 .reveal .oocss-scalable {
-  font-size: 3.2rem; }
+  font-size: 3.4rem;
+  font-weight: 700;
+  text-transform: uppercase; }
 .reveal .for-dnn {
-  font-size: 2.6rem; }
+  font-size: 2.6rem;
+  font-weight: 700; }
+.reveal div.margin-box {
+  margin: 3rem 0; }
 
 h1.intro__title {
-  margin: 0;
+  margin: 0 0 2rem;
   line-height: 1.4; }
   h1.intro__title span {
     display: block;
@@ -184,7 +197,101 @@ h1.slide-title {
 h2.box-title {
   margin: 20px 0;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 400;
+  color: #777;
+  line-height: 1.2; }
+
+ul.box-list {
+  margin: 2rem;
+  list-style: none;
+  font-size: 1.6rem;
+  line-height: 1.4; }
+  ul.box-list li {
+    margin-bottom: 20px; }
+
+span.box-list-sub {
+  display: block;
+  font-size: 1.3rem;
   color: #777; }
+
+p.box-content {
+  font-size: 1.4rem; }
+
+h2.hero-title {
+  font-size: 5.8rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 4.0rem 0 0;
+  color: #111; }
+
+h3.hero-subtitle {
+  margin: 1rem 0 0;
+  line-height: 1.2;
+  font-size: 3.0rem;
+  text-align: left;
+  font-weight: 700;
+  color: #333; }
+
+div.footnote {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+  text-align: right; }
+
+span.bad, span.good {
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: block;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee; }
+
+span.bad {
+  color: #d75b5b; }
+
+span.good {
+  color: #368b71; }
+
+div.block {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  background: #111;
+  border-radius: 30px;
+  position: relative; }
+  div.block.block-sass {
+    background: #c6538c; }
+  div.block.block-compass {
+    background: #fb292d; }
+  div.block.block-gulp {
+    background: #e74c3c; }
+  div.block span {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    font-weight: 700;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    margin-top: -.5rem; }
+  div.block.block-big span {
+    margin-top: -1.5rem; }
+
+.reveal a.button-primary {
+  background-color: #4AADB7 !important;
+  border: 1px solid #3E919A;
+  display: inline-block;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px;
+  border: none;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 5px;
+  font-size: 1.3rem; }
+  .reveal a.button-primary:hover, .reveal a.button-primary:focus {
+    background-color: #3E919A !important;
+    color: #fff; }
 
 /*# sourceMappingURL=dnncss.css.map */

@@ -50,7 +50,7 @@
 								Object-Oriented and Scalable CSS
 							</span>
 							<span class="for-dnn">
-								for DNN
+								FOR DNN
 							</span>
 						</h1>
 						<h2 class="intro__name">
@@ -70,137 +70,806 @@
 						<img src="images/logo-managed.png" class="logo" />
 					</div>
 				</section>
+				<section>
+					<h2 class="hero-title">How can we leverage DNN and OOCSS to create future friendly, scalable websites?</h2>
+				</section>
 				<section data-background="images/team.jpg" data-background-size="100%">
 				</section>
 				<section>
 					<h1 class="slide-title">
-						How GW Uses DNN
+						How We Use DNN at Gravity Works
 					</h1>
-					DNN is more of a foundation, not our CMS.
-					We use 3rd Party Modules for managing Content.
-					A foundation for our custom modules and web apps.
+					<h2 class="hero-title">DNN is a foundation.</h2>
+					<h3 class="hero-subtitle">
+						We use 3rd party modules to handle the CMS side of things and custom modules to handle custom features and web "app" components.
+					</h3>
 				</section>
 				<section>
 					<h1 class="slide-title">
-						The Tools We Use
+						The Front-End Tools We Use:
 					</h1>
 					<div class="layout">
-						<div class="box">
-							<img src="images/svg/DNN.svg" />
-							<h2 class="box-title">Custom Development and 3rd Party modules</h2>
-						</div>
 						<div class="box">
 							<img src="images/svg/OOCSS.svg" />
 							<h2 class="box-title">OOCSS</h2>
 						</div>
 						<div class="box">
+							<img src="images/svg/SMACSS.svg" />
 							<h2 class="box-title">SMACSS</h2>
 						</div>
 						<div class="box">
+							<img src="images/svg/build-tools.svg" />
 							<h2 class="box-title">Gulp + Sass + Compass</h2>
 						</div>
 					</div>
 				</section>
 				<section>
 					<h1 class="slide-title">
-						What this gives us:
+						What This Gives Us:
 					</h1>
-					Better Maintainability
-					Easier to Scale
-					Future Friendly
-					Happier Front-End Devs!
+					<div class="layout">
+						<div class="box">
+							<h2 class="box-title">Better Maintainability</h2>
+							<p class="box-content">Build tools can help streamline development, making it easier to maintain projects.</p>
+						</div>
+						<div class="box">
+							<h2 class="box-title">Easier to<br/> Scale</h2>
+							<p class="box-content">Using OOCSS principles, our CSS will be easier to scale, modify, and grow.</p>
+						</div>
+						<div class="box">
+							<h2 class="box-title">Future <br/>Friendly</h2>
+							<p class="box-content">Revisiting older projects will be less of a pain when it comes time for new additions.</p>
+						</div>
+						<div class="box">
+							<h2 class="box-title">Happier Front-End Devs!</h2>
+							<p class="box-content">Your front-end devs will delight in cleaner stylesheets and having less pain points!</p>
+						</div>
+					</div>
 				</section>
 				<section>
-					<h1>Before we get to our CSS, a brief history and Where We Are Now</h1>
+					<h1 class="slide-title">Before we get to our CSS</h1>
+					<h2 class="hero-title">A Brief History and Where We Are Now</h2>
 				</section>
 				<section>
-					<h1 class="slide-title">
-						The Old Way: 3rd Party Modules
-					</h1>
-					Image of old file structure, lots of separated CSS files
-					3rd party modules have a lot of their own opinions about css and markup. getting these to play nice with our own theme is not always possible; some modules aren't templatable (can't change the markup) or not themable (can't change the css). You're left with a lot of overriding and !important hell
+					<section>
+						<h1 class="slide-title">
+							The Old Way: 3rd Party Modules
+						</h1>
+						<div class="margin-box align-center">
+							<img src="images/svg/CrazyFiles.svg" width="30%" />
+						</div>
+					</section>
+					<section>
+						<h3 class="hero-subtitle">Some DNN Modules...</h3>
+							<ul class="box-list align-center">
+								<li>
+									Are Opinionated
+									<span class="box-list-sub">Not Responsive</span>
+								</li>
+								
+								<li>Are Not Templatable
+									<span class="box-list-sub">Can't change the Markup</span>
+								</li>
+								<li>Are Not Themable
+									<span class="box-list-sub">Can't change the CSS</span>
+								</li>
+								<li>Use Non-semantic HTML
+									<span class="box-list-sub">Improper use of tables, badly markedup form elements</span>
+								</li>
+								<li>Force you to use janky CSS
+									<span class="box-list-sub">Deep Selectors or !important</span>
+								</li>
+							</ul>
+
+					</section>
+					
+						
 				</section>
 				<section>
 					<h1 class="slide-title">
 						The Old Way: Custom Modules
 					</h1>
-					Our custom modules sometimes fell into the same pitfall: Scatter module.css files with unshareable styles.
+					<h2 class="hero-title">Custom modules can fall into the same pitfalls:</h2>
+					<h3 class="hero-subtitle">Scattered module.css files with unshareable styles</h3>
 				</section>
 				<section>
 					<h1 class="slide-title">
 						The New Way: 3rd Party Modules
 					</h1>
-					Choose Better 3rd Party Modules
-					Look for ones that are templatable and themable
-					are the templates and theme files easilly maintained in version control? (i.e. can you only edit them in some weird DNN interface)
-					Look for ones the follow modern approaches to web design: Do they work in a responsive setting? Do they use semantic HTML? (i.E. are there tables for the layout?)
+					<h2 class="hero-title">Choose Better 3rd Party Modules</h2>
+					<div class="layout">
+						<div class="box">
+							Are they templatable and themable?
+						</div>
+						<div class="box">
+							Can you maintain your changes in version control easily?
+						</div>
+						<div class="box">
+							Do they work responsively? Are they using semantic HTML?
+						</div>
+					</div>
 				</section>
 				<section>
 					<h1 class="slide-title">
 						The New Way: 3rd Party Modules (cont)
 					</h1>
-					Some of our favorite modules
-					EasyDNNNews News/Events/Content Types
-					Ventrian News Articles News/Content Types
-					2SexyContent Everything ever!
+					<h2 class="hero-title">
+						Our Favorite Modules
+					</h2>
+					<div class="layout">
+						<div class="box">
+							<h2 class="box-title">
+								EasyDNNNews 
+							</h2>
+							News - Events - Content Types
+						</div>
+						<div class="box">
+							<h2 class="box-title">
+								Ventrian News Articles
+							</h2>
+							News - Content Types
+						</div>
+						<div class="box">
+							<h2 class="box-title">2SXC</h2>
+							Everything ever!
+						</div>
+					</div>
+					
+					 
+					
 				</section>
 				<section>
 					<h1 class="slide-title">
 						The New Way: Custom Modules and 3rd Party Modules
 					</h1>
-					No more module.css files. No more scattered style sheets specific to a module. All of our styles are maintained through our theme.
+					<h2 class="hero-title">
+						Get Rid of Scattered Stylesheets in DNN
+					</h2>
+					<h3 class="hero-subtitle">96% of our styles are defined in our skin.</h3>
 				</section>
 				<section>
-					<h1>Now that that's cleared up, let's talk about our CSS</h1>
+					<h2 class="hero-title">
+						Now that that's cleared up, let's talk about our CSS
+					</h2>
 				</section>
 				<section>
-					<h1 class="slide-title">OOCSS</h1>
-					- "Separate Structure and Skin" - Define certain features (such as a combination of padding and border-color) as small css "objects" that can be built up and combined with other objects to form modules. Also, avoid styling elements directly.
-					Bad / Good
-					- "Separate Container and Content" - CSS objects should be movable; don't rely on an objects location to style it.
-					Bad / Good
+					<h2 class="hero-title">
+						Object Oriented CSS
+					</h2>
+					<div class="layout">
+						<div class="box">
+							<div class="block block-big">
+								<span>Separate Structure<br/>and Skin</span>
+							</div>
+						</div>
+						<div class="box">
+							<div class="block block-big">
+								<span>Separate Container<br/>and Content</span>
+							</div>
+						</div>
+					</div>
+					<div class="footnote">
+						<a href="https://github.com/stubbornella/oocss/wiki">https://github.com/stubbornella/oocss/wiki</a>
+					</div>
 				</section>
 				<section>
-					<h1 class="slide-title">A Little Dash of SMACSS</h1>
-					We don't follow it to a T, but here are our take-a-ways:
-					- Minimize Depth of Applicability - Ours is shallow, we use a lot of classes on our elements and create a lot of modules because it makes it that much easier to scale.
-					- Separate our CSS into Base Rules, layout rules and Modules (and even then, some of our layouts ARE more like modules)
+					<section>
+						<h2 class="hero-title">
+							Separate Structure and Skin
+						</h2>
+						<h3 class="hero-subtitle">
+							Avoid styling elements directly.
+						</h3>
+						<div class="layout">
+							<div class="box">
+								<span class="bad">
+									Bad
+								</span>
+								<pre><code data-trim>
+h2 {
+  color: #111;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+								</code></pre>
+								
+							</div>
+							<div class="box">
+								<span class="good">
+									Better
+								</span>
+								<pre><code data-trim>
+.callout-title {
+  color: #111;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+								</code></pre>
+
+							</div>
+						</div>
+					</section>
+					<section>
+						<h3 class="hero-subtitle">
+							Also, avoid styling deep selectors.
+						</h3>
+						<div class="layout">
+							<div class="box">
+								<span class="bad">
+									Bad
+								</span>
+								<pre><code data-trim>
+.nav li {
+  display: inline-block
+}
+.nav li a {
+  display: block;
+  padding: 10px;
+}
+								</code></pre>
+							</div>
+							<div class="box">
+								<span class="good">
+									Better
+								</span>
+								<pre><code data-trim>
+.nav__item {
+  display: inline-block;
+}
+.nav__link {
+  display: block;
+  padding: 10px;
+}
+								</code></pre>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2 class="hero-title">
+							Separate Container and Content
+						</h2>
+						<h3 class="hero-subtitle">
+							Don't rely on a CSS object's location to style it.
+						</h3>
+					</section>
+					<section>
+						<span class="bad">
+							Bad
+						</span>
+						<pre><code data-trim>
+<div class="sidebar">
+  <a class="button">Button</a>
+</div>
+
+.button {
+	display: block;
+	padding: 10px;
+	background: white;
+	color: black
+}
+.sidebar .button {
+  background: black;
+  color: white;
+}
+						</code></pre>
+					</section>
+					<section>
+						<span class="good">
+							Better
+						</span>
+						<pre><code data-trim>
+<div class="sidebar">
+  <a class="button button--alt">Button</a>
+</div>
+
+.button {
+	display: block;
+	padding: 10px;
+	background: white;
+	color: black
+}
+.button--alt {
+  background: black;
+  color: white;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h3 class="hero-subtitle">
+							Create CSS Objects that can be combined to form modules.
+						</h3>
+						<div class="layout">
+							<div class="box">
+								<span class="bad">
+									Bad
+								</span>
+								<pre><code data-trim>
+.featured-article {
+	padding: 20px;
+	flex: 2;
+	background: lightgray;
+	border: 1px solid darkgray;
+}
+						</code></pre>
+							</div>
+							<div class="box">
+								<span class="good">
+									Better
+								</span>
+								<pre><code data-trim>
+.column, .featured-article {
+	padding: 20px;
+	flex: 2;
+}
+.box, .featured-article {
+	background: lightgray;
+	border: 1px solid darkgray;
+}
+
+								</code></pre>
+							</div>
+						</div>
+						
+
+
+					</section>
+					<section>
+						<span class="good">Better (with Sass)</span>
+						<pre><code data-trim>
+.column, %column {
+	padding: 20px;
+	flex: 2;
+}
+.box, %box {
+	background: lightgray;
+	border: 1px solid darkgray;
+}
+.featured-article {
+	@extend %column;
+	@extend %box;
+}
+
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h2 class="hero-title">SMACSS</h2>
+					<h3 class="hero-subtitle">Scalable and Modular Architecture for CSS</h3>
+					<div class="layout">
+						<div class="box">
+							<div class="block block-big"><span>Minimize Depth of Applicability</span></div>
+						</div>
+						<div class="box">
+							<div class="block block-big"><span>Base Rules, layout rules<br/> and Modules</span></div>
+						</div>
+					</div>
 				</section>
 				<section>
-					<h1 class="slide-title">
-						Sass <heart>
+					<h2 class="hero-title">
+						Build Tools ❤
 					</h1>
-					We use Sass because it lets us write scalable OOCSS more efficiently and it makes it easier to maintain.
-					- mixins are a lifesaver
-					- placeholders are awesome
-					- @extend is an OOCSS-er's best Friend
+					<h3 class="hero-subtitle">Use what works for your team. Use a preprocesser or don't. Find your pain points, where you need to save time, and what you need to make more efficient.</h3>
+					<div class="layout">
+						<div class="box">
+							<div class="block block-sass"><span>Sass</span></div>
+						</div>
+						<div class="box">
+							<div class="block block-compass"><span>Compass</span></div>
+						</div>
+						<div class="box">
+							<div class="block block-gulp"><span>Gulp + Plugins</span></div>
+						</div>
+					</div>
 						
 				</section>
 				<section>
-					<h1 class="slide-title">
-						An OOCSS Example: Buttons
-					</h1>	
-					A common Example for OOCSS and SMACSS are button styles, typically you'll have
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Buttons
+						</h1>	
+						<div class="align-center">
+							<h2 class="hero-title align-center">Button Module</h2>
+							<div class="margin-box">
+								<img src="images/svg/ButtonExample.png" />
+							</div>
+						</div>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Buttons
+						</h1>
+						<pre><code data-trim>
+.button-primary {
+	background: #4AADB7;
+	border: 1px solid #3E919A;
+	display: inline-block;
+	line-height: 1;
+	color: #fff;
+	text-decoration: none;
+	background: none;
+	text-align: center;
+	font-weight: 700;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.3rem;
+}
+.button-primary:hover, .button-primary:focus {
+	background: #3E919A;
+	color: #fff;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Buttons
+						</h1>						
+						<pre><code data-trim>
+.button-secondary {
+	background: #93A1A7;
+	border: 1px solid #727D82;
+	display: inline-block;
+	line-height: 1;
+	color: #fff;
+	text-decoration: none;
+	background: none;
+	text-align: center;
+	font-weight: 700;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.3rem;
+}
+.button-secondary:hover, .button-secondary:focus {
+	background: #727D82;
+	color: #fff;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Buttons
+						</h1>						
+						<pre><code data-trim>
+/* button */
+.button, .button-primary, .button-secondary {
+	display: inline-block;
+	line-height: 1;
+	text-decoration: none;
+	background: none;
+	text-align: center;
+	font-weight: 700;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	font-size: 1.3rem;
+}
 
-					image of button button-secondary button-disabled button-active
+/* button-primary */
+.button-primary {
+	background: #4AADB7;
+	border-color: #3E919A;	
+	color: #fff;		
+}
+.button-primary:hover, .button-primary:focus {
+	background: #3E919A;
+	color: #fff;
+}
+
+/* button-secondary */
+.button-secondary {
+	background: #93A1A7;
+	border-color: #727D82;	
+	color: #fff;		
+}
+.button-secondary:hover, .button-secondary:focus {
+	background: #727D82;
+	color: #fff;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Buttons
+						</h1>						
+						<pre><code data-trim>
+/* button */
+.button, %button {
+	display: inline-block;
+	line-height: 1;
+	text-decoration: none;
+	background: none;
+	text-align: center;
+	font-weight: 700;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	font-size: 1.3rem;
+}
+
+/* button-primary */
+.button-primary {
+	@extend %button;
+	background: #4AADB7;
+	border-color: #3E919A;	
+	color: #fff;
+	&:hover, &:focus {
+		background: #3E919A;
+		color: #fff;
+	}		
+}
+
+/* button-secondary */
+.button-secondary {
+	@extend %button;
+	background: #93A1A7;
+	border-color: #727D82;	
+	color: #fff;
+	&:hover, &:focus {
+		background: #727D82;
+		color: #fff;
+	}		
+}
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Buttons
+						</h1>						
+						<pre><code data-trim>
+
+.u-block-text, %u-block-text {
+	line-height: 1;
+	text-decoration: none;
+	padding: 10px;
+	display: inline-block;	
+}
+
+/* button */
+.button, %button {	
+	@extend %u-block-text;
+	text-align: center;
+	background: none;	
+	font-weight: 700;	
+	border: 1px solid transparent;
+	border-radius: 5px;
+	font-size: 1.3rem;
+}
+
+/* button-primary */
+.button-primary {
+	@extend %button;
+	background: #4AADB7;
+	border-color: #3E919A;	
+	color: #fff;
+	&:hover, &:focus {
+		background: #3E919A;
+		color: #fff;
+	}		
+}
+
+/* button-secondary */
+.button-secondary {
+	@extend %button;
+	background: #93A1A7;
+	border-color: #727D82;	
+	color: #fff;
+	&:hover, &:focus {
+		background: #727D82;
+		color: #fff;
+	}		
+}
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Buttons
+						</h1>	
+						<div class="align-center">
+							<h2 class="hero-title align-center">Button Module: Modifications</h2>
+							<div class="margin-box">
+								<img src="images/svg/ButtonExampleMod.png" />
+							</div>
+						</div>
+
+					</section>	
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Buttons
+						</h1>
+						<pre><code data-trim>
+/* buttons */
+// .. previous button modules
+
+.button--block {
+	display: block;
+	width: 100%;
+}
+.button--disabled {
+	background: #eee;
+	color: #aaa;
+	&:hover {
+	  cursor: no-drop;
+	}
+	&:hover, &:focus {
+	  background: #eee;
+	  color: #aaa;
+	}
+}
+.button--active {
+	&:before {
+	  content: '';
+	  @extend .icon-check;
+	  vertical-align: middle;
+	  margin: 0 5px;
+	}
+}
+
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Buttons
+						</h1>
+						<pre><code data-trim>
+<button class="button-primary button--block">Block</button>
+<button class="button-primary button--disabled">Disabled</button>
+<button class="button-primary button--active">Active</button>
+						</code></pre>
+
+					</section>				
 				</section>
+				
 				<section>
-					<h1 class="slide-title">
-						An OOCSS Example: Buttons
-					</h1>
-					.button-primary
-					.button-primary:hover, .button-primary:focus
-					.button-secondary
-					.button-secondary:hover, .button-secondary:focus
-				</section>
-				<section>
-					<h1 class="slide-title">
-						An OOCSS Example: Buttons
-					</h1>
-					What if we want to add modifications?
-					.disabled
-					.block
-					.active
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<div class="margin-box align-center">
+							<img src="images/png/LayoutExample.png" width="60%" />
+						</div>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<div class="margin-box align-center">
+							<img src="images/png/2SXCSettings.png" width="100%" />
+						</div>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<div class="margin-box align-center">
+							<img src="images/png/LayoutExampleHighlight.png" width="60%" />
+						</div>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<div class="margin-box align-center">
+							<img src="images/png/FlexNormal.png" />
+						</div>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<pre><code data-trim>
+<div class="flex">
+  <div class="flex__image">
+    <img src="image.jpg" alt="" />
+  </div>
+  <div class="flex__content">
+    <h2 class="flex__title">
+      <a href="#">Title Text</a>
+    </h2>
+    <p>Paragraph Text</p>
+  </div>
+</div>
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<pre><code data-trim>
+<div class="flex-list">
+  @foreach(var e in List) {
+	var Content = e.Content;
+	<div class="flex">
+	  <div class="flex__image">
+	    <img src="@Content.flex_image" alt="@Content.flex_image_alt" />
+	  </div>
+	  <div class="flex__content">
+	    <h2 class="flex__title">
+	      <a href="@Content.flex_link">@Content.flex_title</a>
+	    </h2>
+	    @Html.Raw(@Content.flex_content)
+	  </div>
+	</div>
+  }
+</div>	
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<pre><code data-trim>
+.flex {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.flex__image {
+	img {
+		width: 100%;
+	}
+}
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<pre><code data-trim>
+.flex-list {
+	display: flex;
+	flex-direction: column;
+	margin: 0 -20px;
+	@include breakpoint($tablet) {
+		flex-direction: row;
+	}
+	.flex {
+		flex: 1;
+		padding: 0 20px;
+	}
+}
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<div class="margin-box align-center">
+							<img src="images/png/FlexFeatured.png" width="100%" />
+						</div>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<pre><code data-trim>
+<div class="flex flex--row">
+	<!-- rest of .flex code -->
+</div>
+						</code></pre>	
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<pre><code data-trim>
+.flex--row {
+  @include breakpoint($mobile) {
+    flex-direction: row;
+    .flex__content {
+      padding-left: 20px;
+    }
+    .flex__image {
+      max-width: 45%;
+    }
+  }
+}
+						</code></pre>
+
+					</section>
+					
 				</section>
 				<section>
 					<h1 class="slide-title">An OOCSS Example: Media Object</h1>
@@ -249,7 +918,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-
+		
 		<script>
 
 			// Full list of configuration options available here:

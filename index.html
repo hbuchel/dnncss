@@ -869,21 +869,113 @@ h2 {
 						</code></pre>
 
 					</section>
-					
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<div class="margin-box align-center">
+							<img src="images/png/FlexIcons.png" />
+						</div>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<pre><code data-trim>
+<div class="flex-list flex-list--bullets">
+	<div class="flex flex--row">
+		<!-- rest of .flex code -->
+	</div>
+</div>
+						</code></pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<pre><code data-trim>
+.flex-list--bullets {
+  @include breakpoint($tablet) {
+    flex-wrap: wrap;
+    .flex {
+      flex: 1 0 (100%/3);
+    }
+  }
+}
+						</code></pre>
+
+
+					</section>
+					<section>
+						<h1 class="slide-title">
+							An OOCSS Example: Flex Media
+						</h1>
+						<pre><code data-trim>
+.flex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.flex__image {
+  img {
+    width: 100%;
+  }
+}
+
+.flex--row {
+  @include breakpoint($mobile) {
+    flex-direction: row;
+    .flex__content {
+      padding-left: 20px;
+    }
+    .flex__image {
+      max-width: 45%;
+    }
+  }
+}
+
+.flex-list {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint($tablet) {
+    flex-direction: row;
+  }
+  margin: 0 -20px;
+  .flex {
+    flex: 1;
+    padding: 0 20px;
+  }
+}
+
+.flex-list--bullets {
+  @include breakpoint($tablet) {
+    flex-wrap: wrap;
+    .flex {
+      flex: 1 0 (100%/3);
+      
+    }
+  }
+}
+
+						</code></pre>
+					</section>
+					<section>
+						<h3 class="hero-subtitle">
+							<a href="https://github.com/hbuchel/2SXCFlex">
+								https://github.com/hbuchel/2SXCFlex
+							</a>
+						</h3>
+					</section>
 				</section>
-				<section>
-					<h1 class="slide-title">An OOCSS Example: Media Object</h1>
-					Image of three different media objects
-					Flex list row with image (Articles)
-					Flex List row with icon (Services)
-					flex list column with image (User Profiles)
-				</section>
+				
 				<section>
 					<h1 class="slide-title">
-						Don't Overmodularize
+						A Note on CSS Modules
 					</h1>
-					.button-primary.block could have been .button-primary--block
-					Walk the fine line of creating modules, but still
+					<h2 class="hero-title">
+						It's tempting to over-modularize.
+					</h2>
 				</section>
 				<section>
 					<h1 class="slide-title">

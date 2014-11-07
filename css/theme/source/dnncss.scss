@@ -34,8 +34,8 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 // Theme Colors
 $box-title: #777;
-$hero-title: #111;
-$hero-subtitle: #333;
+$hero-title: #5E3B49;
+$hero-subtitle: #B04C5C;
 $note: #777;
 
 
@@ -73,16 +73,19 @@ div.box {
 	.writing {
 		font-size: 2.2rem;
 		font-weight: 700;
+		color: $hero-title;
 	}
 	.oocss-scalable {
-		font-size: 3.4rem;
+		font-size: 3.6rem;
 		font-weight: 700;
-		text-transform: uppercase;
+		color: $hero-subtitle;
+		// text-transform: uppercase;
 
 	}
 	.for-dnn {
 		font-size: 2.6rem;
 		font-weight: 700;
+		color: $hero-title;
 	}
 
 	div.margin-box {
@@ -91,7 +94,7 @@ div.box {
 }
 
 h1.intro__title {
-	margin: 0 0 2rem;
+	margin: 0 0 4rem;
 	line-height: 1.4;
 	span {
 		display: block;
@@ -99,10 +102,14 @@ h1.intro__title {
 	}
 }
 h2.intro__name {
-	font-size: 2.4rem;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	color: #666;
 }
 h3.intro__twitter {
-	font-size: 2.0rem;
+	font-size: 1.8rem;
+	color: #666;
+	margin-bottom: 3rem;
 }
 
 /* Slides Generic */
@@ -124,7 +131,7 @@ h1.slide-title {
 h2.box-title {
 	margin: 20px 0;
 	font-size: 1.8rem;
-	font-weight: 400;
+	font-weight: 700;
 	color: $box-title;
 	line-height: 1.2;
 }
@@ -143,7 +150,8 @@ span.box-list-sub {
 	color: $note;
 }
 p.box-content {
-	font-size: 1.4rem;
+	font-size: 1.3rem;
+	color: #555;
 }
 h2.hero-title {
 	font-size: 5.8rem;
@@ -184,28 +192,38 @@ div.block {
 	width: 100%;
 	height: 0;
 	padding-top: 100%;
-	background: #111;
+	background: #f7f7f7;
 	border-radius: 30px;
 	position: relative;
-	&.block-sass {
-		background: #c6538c;
-	}
-	&.block-compass {
-		background: #fb292d;
-	}
-	&.block-gulp {
-		background: #e74c3c;
-	}
 	span {
 		position: absolute;
 		top: 50%;
-		color: #fff;
+		color: #111;
 		font-weight: 700;
 		left: 0;
 		text-align: center;
 		width: 100%;
 		margin-top: -.5rem;
 	}
+	&.block-sass {
+		background: #c6538c;
+		span {
+			color: #fff;
+		}
+	}
+	&.block-compass {
+		background: #fb292d;
+		span {
+			color: #fff;
+		}
+	}
+	&.block-gulp {
+		background: #e74c3c;
+		span {
+			color: #fff;
+		}
+	}
+	
 	&.block-big {
 		span {
 			margin-top: -1.5rem;

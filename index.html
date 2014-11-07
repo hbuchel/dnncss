@@ -61,13 +61,13 @@
 						</h3>
 					</div>
 					<div class="logos">
-						<img src="images/logo-dnn.png" class="logo" /><br/>
-						<img src="images/logo-10poundgorilla.png" class="logo" />
-						<img src="images/logo-appliedinnovations.png" class="logo" />
-						<img src="images/logo-avalara.png" class="logo" /><br/>
-						<img src="images/logo-dnn4less.png" class="logo" />
-						<img src="images/logo-hotcakes.png" class="logo" />
-						<img src="images/logo-managed.png" class="logo" />
+						<img src="images/logo-dnn.png" class="logo" width="200px" /><br/>
+						<img src="images/logo-10poundgorilla.png" width="80px" class="logo" />
+						<img src="images/logo-appliedinnovations.png" width="100px" class="logo" />
+						<img src="images/logo-avalara.png" width="100px" class="logo" /><br/>
+						<img src="images/logo-dnn4less.png" width="100px" class="logo" />
+						<img src="images/logo-hotcakes.png" width="100px" class="logo" />
+						<img src="images/logo-managed.png" width="100px" class="logo" />
 					</div>
 				</section>
 				<section>
@@ -162,6 +162,9 @@
 							</ul>
 
 					</section>
+					<section>
+						<h3 class="hero-subtitle">The same holds true for most content management systems.</h3>
+					</section>
 					
 						
 				</section>
@@ -182,7 +185,7 @@
 							Are they templatable and themable?
 						</div>
 						<div class="box">
-							Can you maintain your changes in version control easily?
+							Can you maintain your changes and documentation easily?
 						</div>
 						<div class="box">
 							Do they work responsively? Are they using semantic HTML?
@@ -198,20 +201,18 @@
 					</h2>
 					<div class="layout">
 						<div class="box">
-							<h2 class="box-title">
-								EasyDNNNews 
-							</h2>
-							News - Events - Content Types
+							<img src="images/png/easydnnnews.png" style="margin-top: 2rem; margin-bottom: 1.4rem "/>
+							<p class="box-content">News - Events - Content Types</p>
 						</div>
 						<div class="box">
 							<h2 class="box-title">
-								Ventrian News Articles
+								<img src="images/png/ventrian.png" />
 							</h2>
-							News - Content Types
+							<p class="box-content">News - Content Types</p>
 						</div>
 						<div class="box">
-							<h2 class="box-title">2SXC</h2>
-							Everything ever!
+							<img src="images/png/2SXC.png" />
+							<p class="box-content">Everything ever!</p>
 						</div>
 					</div>
 					
@@ -978,31 +979,272 @@ h2 {
 					</h2>
 				</section>
 				<section>
-					<h1 class="slide-title">
-						Putting Together OOCSS with DNN
-					</h1>
-					Because we have these nice modular but still scalable styles
-					we can use these classes and styles in our nicely chosen and better made DNN modules. The same styles used to style articles could also be used to style our events.
-				</section>
+					<section>
+						<h1 class="slide-title">
+							Sass
+						</h1>
+						<h2 class="hero-title">Sass doesn't help us write better css, it helps us become more efficient at writing it.</h2>
+					</section>
+					<section>
+						<h2 class="hero-title">
+							Extend, variables, breakpoints and mixins!
+						</h2>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							Variables
+						</h1>
+						<h2 class="hero-title">$dnn-red: #EF3E42;</h2>
+						<h3 class="hero-subtitle">
+							Sass allows us to define variables that we can use throughout our stylesheet.
+						</h3>
+						<div class="layout">
+							<div class="box">
+								<code>
+									<pre data-trim>
+/* Variables */
+$blue: #4778c6;
+$gray: #eee;
+$radius: 14px;
+p {
+  color: $blue;
+  background: $gray;
+  border-radius: $radius;
+}
+									</pre>
+								</code>
+							</div>
+							<div class="box">
+								<code>
+							<pre data-trim>
+p {
+  color: #4778c6;
+  background: #eee;
+  border-radius: 14px;
+}
+							</pre>
+						</code>
+							</div>
+						</div>
 
+					</section>
+					<section>
+						<h1 class="slide-title">
+							@extend
+						</h1>
+						<h2 class="hero-title">
+							@extend manages our selector inheritance
+						</h2>
+						<h3 class="hero-subtitle">
+							Use when you want to share styles (smaller css objects) between your different modules.
+						</h3>
+					</section>
+					<section>
+						<pre><code data-trim>
+.box-sizing, %box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.callout, %callout {
+  font-size: 24px;
+  line-height: 1.6;
+}
+.column {
+  padding: 10px;
+  background: $blue;
+  @extend .box-sizing;
+  @extend .callout;
+}							
+						</code></pre>
+					</section>
+					<section>
+						<pre>
+							<code data-trim>
+.box-sizing, .column {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.callout, .column {
+  font-size: 24px;
+  line-height: 1.6;
+}
+.column {
+  padding: 10px;
+  background: #4778c6; 
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							@mixin
+						</h1>
+						<h2 class="hero-title">
+							mixins allow us to repeat chunks of code.
+						</h2>
+						<h3 class="hero-subtitle">
+							We can also pass variables and settings to mixins to modify their output.
+						</h3>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							@mixin
+						</h1>
+						<pre>
+							<code data-trim>
+@mixin image-replace {
+  display: block;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.button {
+  background: url(button.bg);
+  @include image-replace;
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code data-trim>
+.button {
+  background: url(button.bg);
+  display: block;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							@mixin
+						</h1>
+						<h2 class="hero-title">
+							Be careful.
+						</h2>
+						<h3 class="hero-subtitle">
+							Don't overuse mixins, consider if you can @extend an existing class. Mixins are especially handy within media queries or when you need to make a modification to a block of code.
+						</h3>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							@mixin
+						</h1>
+						<div class="layout">
+							<div class="box">
+								<pre>
+							<code data-trim>
+@mixin font-size($sizeValue: 1){
+  font-size: ($sizeValue) + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  @include font-size(16);
+}
+									</code>
+								</pre>
+							</div>
+							<div class="box">
+								<pre>
+							<code data-trim>
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+							</code>
+						</pre>
+							</div>
+						</div>
+						
+					</section>
+					<section>
+						<h1 class="slide-title">
+							@mixin
+						</h1>
+						<pre>
+							<code data-trim>
+@mixin breakpoint($break) {
+  @media (min-width: $break) { @content; }
+}
+@include breakpoint($tablet) {
+  .footer-connect {
+    width: span(4);
+  }
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h1 class="slide-title">
+							@mixin
+						</h1>
+						<pre>
+							<code data-trim>
+@media (min-width: 920px) {
+  .footer-connect {
+    width: 40%;
+  }
+}
+							</code>
+						</pre>
+					</section>
+				</section>
 				<section>
-					- Sponsors/DNN Intro Slide
-					- Who I am
-					- Who Gravity Works Is
-					- What We're Going to talk about
-					- What type of websites we make
-					- How we Use DNN - It's not a CMS for us. It's a foundation for our own frameworks.
-					- Our Custom Modules
-					- Some of our Favorite 3rd Party Modules
-					- How we write CSS at Gravity Works
-					- Some Modules are Opinionated, what this causes
-					- Why writing OOCSS and choosing better modules helps with This
-					- 
-					- Sharing Container Styles with Your Theme
-					- Sharing Styles Across Modules
-					- How we Use Sass to make this easier
-					- How we use Gulp to make this easier
-					- How we use a style guide to make it easier to find reusable styles 
+					<h2 class="hero-title align-center">Thanks!</h2>
+					<div class="layout">
+						<div class="box">
+							<img src="images/svg/twitter.svg" />
+							<p class="box-content">
+								Twitter
+							</p>
+						</div>
+						<div class="box">
+							<img src="images/svg/codepen.svg" />
+							<p class="box-content">
+								Codepen
+							</p>
+						</div>
+						<div class="box">
+							<img src="images/svg/github.svg" />
+							<p class="box-content">
+								Github
+							</p>
+						</div>
+					</div>
+					<div class="align-center">
+						<h3 class="hero-subtitle align-center">
+							/hbuchel
+						</h3>
+					</div>
+				</section>
+				<section>
+					<h3 class="hero-subtitle align-center">
+						Thanks to all of our generous sponsors!
+					</h3>
+					<div class="logos">
+						<img src="images/logo-dnn.png" class="logo" width="200px" /><br/>
+						<img src="images/logo-10poundgorilla.png" width="80px" class="logo" />
+						<img src="images/logo-appliedinnovations.png" width="100px" class="logo" />
+						<img src="images/logo-avalara.png" width="100px" class="logo" /><br/>
+						<img src="images/logo-dnn4less.png" width="100px" class="logo" />
+						<img src="images/logo-hotcakes.png" width="100px" class="logo" />
+						<img src="images/logo-managed.png" width="100px" class="logo" /><br/>
+						<img src="images/logo-bravo.png" width="100px" class="logo" />
+						<img src="images/logo-gw.png" width="100px" class="logo" />
+						<img src="images/logo-iowa.png" width="100px" class="logo" />
+						<img src="images/logo-spiffy.png" width="100px" class="logo" /><br/>
+						<img src="images/logo-3ess.png" width="100px" class="logo" />
+						<img src="images/logo-carter.png" width="100px" class="logo" />
+					</div>
+
 				</section>
 				
 			</div><!--.slides-->

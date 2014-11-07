@@ -154,29 +154,35 @@ div.box {
   margin: 20px; }
 .reveal .writing {
   font-size: 2.2rem;
-  font-weight: 700; }
-.reveal .oocss-scalable {
-  font-size: 3.4rem;
   font-weight: 700;
-  text-transform: uppercase; }
+  color: #5E3B49; }
+.reveal .oocss-scalable {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #B04C5C; }
 .reveal .for-dnn {
   font-size: 2.6rem;
-  font-weight: 700; }
+  font-weight: 700;
+  color: #5E3B49; }
 .reveal div.margin-box {
   margin: 3rem 0; }
 
 h1.intro__title {
-  margin: 0 0 2rem;
+  margin: 0 0 4rem;
   line-height: 1.4; }
   h1.intro__title span {
     display: block;
     text-align: center; }
 
 h2.intro__name {
-  font-size: 2.4rem; }
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #666; }
 
 h3.intro__twitter {
-  font-size: 2.0rem; }
+  font-size: 1.8rem;
+  color: #666;
+  margin-bottom: 3rem; }
 
 /* Slides Generic */
 .reveal .slides > section {
@@ -197,7 +203,7 @@ h1.slide-title {
 h2.box-title {
   margin: 20px 0;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #777;
   line-height: 1.2; }
 
@@ -215,14 +221,15 @@ span.box-list-sub {
   color: #777; }
 
 p.box-content {
-  font-size: 1.4rem; }
+  font-size: 1.3rem;
+  color: #555; }
 
 h2.hero-title {
   font-size: 5.8rem;
   font-weight: 700;
   text-align: left;
   margin: 4.0rem 0 0;
-  color: #111; }
+  color: #5E3B49; }
 
 h3.hero-subtitle {
   margin: 1rem 0 0;
@@ -230,7 +237,7 @@ h3.hero-subtitle {
   font-size: 3.0rem;
   text-align: left;
   font-weight: 700;
-  color: #333; }
+  color: #B04C5C; }
 
 div.footnote {
   font-size: 1.2rem;
@@ -254,24 +261,30 @@ div.block {
   width: 100%;
   height: 0;
   padding-top: 100%;
-  background: #111;
+  background: #f7f7f7;
   border-radius: 30px;
   position: relative; }
-  div.block.block-sass {
-    background: #c6538c; }
-  div.block.block-compass {
-    background: #fb292d; }
-  div.block.block-gulp {
-    background: #e74c3c; }
   div.block span {
     position: absolute;
     top: 50%;
-    color: #fff;
+    color: #111;
     font-weight: 700;
     left: 0;
     text-align: center;
     width: 100%;
     margin-top: -.5rem; }
+  div.block.block-sass {
+    background: #c6538c; }
+    div.block.block-sass span {
+      color: #fff; }
+  div.block.block-compass {
+    background: #fb292d; }
+    div.block.block-compass span {
+      color: #fff; }
+  div.block.block-gulp {
+    background: #e74c3c; }
+    div.block.block-gulp span {
+      color: #fff; }
   div.block.block-big span {
     margin-top: -1.5rem; }
 
